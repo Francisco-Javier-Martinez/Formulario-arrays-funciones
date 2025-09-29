@@ -1,4 +1,5 @@
 <?php
+    //text
     if(empty($_POST['nombre'])){
         echo'<h1>Se envio vacio el campo nombre pero si se creo al ser tipo text </h1>';
     }else{
@@ -9,6 +10,7 @@
     }else{
         echo '<h1>' . $_POST['correoElectronico'] . '</h1>';
     }
+    //radio
     if(isset($_POST['idioma'])){
         echo '<h1>' . $_POST['idioma'] . '</h1>';
     } else {
@@ -22,17 +24,20 @@
             $sw=true;
         }
     }
+    //sw para sacar mensaje de que no ha puesto animal
     if($sw==false){
         echo '<h1>No ha seleccionado ningún animal</h1>';
     }
-    
+    //checkbox de solo 1
     if(isset($_POST['terminosCondicones'])){
         echo '<h1>'.$_POST['terminosCondicones'].'</h1>';
     } else {
         echo '<h1>No ha aceptado los términos y condiciones</h1>';
     }
+    //select
     if(isset($_POST['comoConocio'])){
         echo '<h1>'.$_POST['comoConocio'].'</h1>';
     }
     print_r($$_POST);
+
 ?>
